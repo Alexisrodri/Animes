@@ -2,7 +2,7 @@ import React,{useState, useEffect} from "react"
 import { Link } from "wouter"
 
 
-const Populares = () => {
+const Temporada = () => {
     
 const[loading,setLoading] = useState(true)
 const[data,setData]=useState('')
@@ -12,7 +12,7 @@ const[media,setMedia]=useState('anime')
 
  const Top = async () => {
   try{
-      let url = `https://api.jikan.moe/v4/top/${media}`
+      let url = `https://api.jikan.moe/v4/seasons/now`
       const res = await fetch(url);
       const data = await res.json()
       return data.data
@@ -45,11 +45,9 @@ useEffect(()=>{
 
 
     return(
-    <main className="main">
+    <main className="main-2">
     <div className="main-nav">
-    <h3 className="main-title">Top:</h3>
-    <button className="main-btn" onClick={Anime} >Animes</button>
-    <button className="main-btn" onClick={Manga} >Mangas</button>
+    <h3 className="main-title">En Emision:</h3>
     </div>
       <section className="cont-titulos">
         {loading?
@@ -76,5 +74,5 @@ useEffect(()=>{
     )
 }
 
-export default Populares;
+export default Temporada;
 

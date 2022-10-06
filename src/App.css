@@ -2,7 +2,7 @@
 
 *{
   margin: 0;
-  padding: 0;
+  padding: 5px;
   box-sizing: border-box;
 }
 
@@ -44,7 +44,6 @@ body{
   *{
     scrollbar-color:var(--texts) #eeee;
     scrollbar-width:thin;
-    padding:5px;
   }
 }
 
@@ -240,13 +239,14 @@ p.articulo-des {
 
 .anime-links {
   text-decoration: none;
-  color: var(--title);
+  color: var(--texts-2);
+  font-weight: 900;
   font-size: var(--font-18);
   letter-spacing: 1.5px;
 }
 
 .anime-links:hover{
-  color:#f9da00;
+  color:var(--texts);
 }
 
   .anime-images {
@@ -352,7 +352,6 @@ a {
   height: 595px;
   background:var(--contrast);
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 25px;
   padding: 0 20px;
